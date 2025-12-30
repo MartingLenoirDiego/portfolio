@@ -9,7 +9,7 @@ from app.db.session import get_db, engine
 from app.db.base import Base
 from app.models.project import Project
 from fastapi.staticfiles import StaticFiles
-from app.core.config import API_KEY, API_KEY_NAME, ORIGINS
+from app.core.config import API_KEY, ORIGINS, API_KEY_NAME
 
 
 app = FastAPI(title="Portfolio API")
