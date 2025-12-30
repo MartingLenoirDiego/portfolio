@@ -1,0 +1,65 @@
+:root {
+  --shadow-grey: #252323;
+  --slate-grey: #70798c;
+  --parchment: #f5f1ed;
+  --bone: #dad2bc;
+  --khaki-beige: #a99985;
+}
+
+/* Style global */
+body {
+  background-color: var(--shadow-grey) !important;
+  color: var(--parchment)  !important;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Liens et boutons */
+a, .btn {
+  color: var(--parchment) !important;
+}
+
+.btn-primary {
+  background-color: var(--khaki-beige)  !important;
+  border-color: var(--khaki-beige) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--bone)  !important;
+  border-color: var(--bone) !important;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--slate-grey) !important;
+}
+
+:root {
+  --shadow-grey: #252323;
+  --slate-grey: #70798c;
+  --parchment: #f5f1ed;
+  --bone: #dad2bc;
+  --khaki-beige: #a99985;
+}
+
+/* Navbar style */
+.nav {
+  background-color: var(--slate-grey) !important; 
+}
+
+.navbar .nav-link {
+  color: var(--parchment) !important;
+}
+
+.navbar .nav-link:hover {
+  color: var(--khaki-beige) !important;
+}
+
+.navbar .navbar-brand {
+  color: var(--parchment) !important;
+}
+
+.navbar .navbar-brand:hover {
+  color: var(--khaki-beige) !important;
+}
