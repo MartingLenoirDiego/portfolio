@@ -37,6 +37,9 @@ function AboutPage() {
                   ⚡ I also enjoy creating end-to-end applications, from backend to frontend, integrating everything into fully functional products.
                 </p>
                 <p>
+                  🌌 I’m also passionate about space exploration and everything cosmic, it inspires me to think big and code creatively.
+                </p>
+                <p>
                   🌱 Always curious, constantly learning.
                 </p>
 
@@ -54,7 +57,7 @@ function AboutPage() {
         </div>
 
         {/* ===== CONTACT SECTION ===== */}
-        <div className="card shadow-lg" style={{ backgroundColor: "var(--bone)", color: "var(--shadow-grey)" }}>
+        <div className="shadow-lg" style={{ backgroundColor: "var(--bone)", color: "var(--shadow-grey)" }}>
           <div className="card-body p-4 p-md-5 text-center">
             <h2 className="mb-3">📬 Contact</h2>
             <p className="mb-4">
@@ -63,7 +66,7 @@ function AboutPage() {
 
             {/* Infos de contact */}
             <p>📧 Email: dmarting@hotmail.be</p>
-            <p>📞 Phone: +32 123 456 789</p>
+            <p>📞 Phone: +32 472 11 78 83</p>
 
             {/* Liens externes */}
             <div className="d-flex flex-column flex-md-row justify-content-center gap-3 mt-3">

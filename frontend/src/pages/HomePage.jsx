@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ProjectCard from "../components/ProjetCard.jsx";
 const API_URL = import.meta.env.VITE_BACKEND_URL;
+const BASE_URL = import.meta.env.VITE_URL;
 function HomePage() {
   const [projects, setProjects] = useState([]);
 
@@ -16,7 +17,11 @@ function HomePage() {
     <div className="container py-5" style={{ minHeight: "100vh" }}>
 
       {/* ===== HERO ===== */}
-      <section className="text-center mb-5">
+      <section className="text-center mb-5 rounded shadow"
+        style={{
+          backgroundColor: "var(--bone)",
+          color: "var(--shadow-grey)",
+        }}>
         <h1 className="display-4 fw-bold mb-3">
           Hi, I’m Diego 👋
         </h1>
@@ -36,7 +41,7 @@ function HomePage() {
               key={project.id}
               title={project.title}
               description={project.description}
-              image={API_URL + "/" + project.image_url}
+              image={BASE_URL + "/" + project.image_url}
               link={project.link}
             />
           ))}

@@ -6,7 +6,7 @@ function ProjectCard({ title, description, image, link }) {
       <div
         className="card h-100 shadow"
         style={{
-          backgroundColor: "var(--slate-grey)",
+          backgroundColor: "var(--color-card)",
           color: "var(--parchment)",
         }}
       >

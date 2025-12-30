@@ -115,71 +115,82 @@ function AdminPage() {
   }
 
   return (
-    <div className="container py-5">
-      <div className="d-flex justify-content-between align-items-center mb-4">
-        <h1>Admin - Projects</h1>
-        <button className="btn btn-secondary" onClick={handleLogout}>Logout</button>
-      </div>
+    <div   style={{
+    minHeight: "100vh",           
+    height: "100%",               
+    width: "100%",
+    backgroundImage: 'url("/src/assets/esquie.jpg")',
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",      
+    backgroundPosition: "center",
+    backgroundAttachment: "fixed",         
+  }}>
+      <div className="container py-5">
+        <div className="d-flex justify-content-between align-items-center mb-4">
+          <h1>Admin - Projects</h1>
+          <button className="btn btn-secondary" onClick={handleLogout}>Logout</button>
+        </div>
 
-      {/* Formulaire Ajouter / Modifier */}
-      <form onSubmit={handleSubmit} className="mb-5">
-        <div className="mb-3">
-          <input
-            type="text"
-            placeholder="Title"
-            className="form-control"
-            value={title}
-            onChange={e => setTitle(e.target.value)}
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <textarea
-            placeholder="Description"
-            className="form-control"
-            value={description}
-            onChange={e => setDescription(e.target.value)}
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <input
-            type="text"
-            placeholder="Link"
-            className="form-control"
-            value={link}
-            onChange={e => setLink(e.target.value)}
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <input type="file" onChange={e => setImage(e.target.files[0])} />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          {editId ? "Update Project" : "Add Project"}
-        </button>
-      </form>
+        {/* Formulaire Ajouter / Modifier */}
+        <form onSubmit={handleSubmit} className="mb-5">
+          <div className="mb-3">
+            <input
+              type="text"
+              placeholder="Title"
+              className="form-control"
+              value={title}
+              onChange={e => setTitle(e.target.value)}
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <textarea
+              placeholder="Description"
+              className="form-control"
+              value={description}
+              onChange={e => setDescription(e.target.value)}
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <input
+              type="text"
+              placeholder="Link"
+              className="form-control"
+              value={link}
+              onChange={e => setLink(e.target.value)}
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <input type="file" onChange={e => setImage(e.target.files[0])} />
+          </div>
+          <button type="submit" className="btn btn-primary">
+            {editId ? "Update Project" : "Add Project"}
+          </button>
+        </form>
 
-      {/* Liste des projets */}
-      <div className="row">
-        {projects.map(project => (
-          <div key={project.id} className="col-md-6 mb-3">
-            <div className="card shadow-sm">
-              <img
-                src={project.image_url ? `${BASE_URL}/${project.image_url}` : ""}
-                className="card-img-top"
-                alt={project.title}
-              />
-              <div className="card-body">
-                <h5 className="card-title">{project.title}</h5>
-                <p className="card-text">{project.description}</p>
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-success me-2">View</a>
-                <button className="btn btn-sm btn-warning me-2" onClick={() => handleEdit(project)}>Edit</button>
-                <button className="btn btn-sm btn-danger" onClick={() => handleDelete(project.id)}>Delete</button>
+        {/* Liste des projets */}
+        <div className="row">
+          {projects.map(project => (
+            <div key={project.id} className="col-md-6 mb-3">
+              <div className="card shadow-sm">
+                <img
+                  src={project.image_url ? `${BASE_URL}/${project.image_url}` : ""}
+                  className="card-img-top"
+                  alt={project.title}
+                />
+                <div className="card-body">
+                  <h5 className="card-title">{project.title}</h5>
+                  <p className="card-text">{project.description}</p>
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-success me-2">View</a>
+                  <button className="btn btn-sm btn-warning me-2" onClick={() => handleEdit(project)}>Edit</button>
+                  <button className="btn btn-sm btn-danger" onClick={() => handleDelete(project.id)}>Delete</button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
