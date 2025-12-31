@@ -58,7 +58,7 @@ function AdminPage() {
 
     const url = editId ? `${API_URL}/${editId}` : `${API_URL}/${projects.length + 1}`;
 
-    axios.put(url, formData, { headers: { access_token: token } })
+    axios.put(url, formData, { headers: { "X-API-KEY": token } })
       .then(() => {
         setTitle(""); setDescription(""); setLink(""); setImage(null); setEditId(null);
         fetchProjects();
@@ -77,7 +77,7 @@ function AdminPage() {
   const handleDelete = (id) => {
     if (!token) return;
 
-    axios.delete(`${API_URL}/${id}`, { headers: { access_token: token } })
+    axios.delete(`${API_URL}/${id}`, { headers: {  "X-API-KEY": token } })
       .then(() => fetchProjects())
       .catch(err => {
         if (err.response && err.response.status === 401) {
