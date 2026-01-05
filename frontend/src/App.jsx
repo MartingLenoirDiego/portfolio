@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import AdminPage from './pages/AdminPage';
 import './index.css';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/admin" element={<AdminPage />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
